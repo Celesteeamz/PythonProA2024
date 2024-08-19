@@ -1,39 +1,39 @@
 #calculadora
 listaNumeros = []
-def suma(a,b):
-    return a + b
-
-def division(a,b):
-    if b == 0:
-        print ("Error")
-    else:
-            return a / b
+contador=0
 
 menu =  '''
         #############################
         | 1. Agregar mas notas      |
-        | 4. Calcular               |
+        | 2. Calcular               |   
+        | 3. Salir                  |
         ############################# '''
 
 print(menu)
 
 while True:
     opcion = int(input("Ingresa la opcion: "))
-
     if  opcion == 1 :
-        notass =input("Ingresar la nota: ")
-        listaNumeros.append(resultado)
-    
-    elif opcion > 2 :
+        notass =(int(input("Ingresar la nota: ")
+        listaNumeros.append(notass)
+        continue
+
+    if opcion == 2 :
+        resultado = (notass+0)/contador
+        print(f"Resultado es:", resultado )
+
+    elif opcion > 3 :
         print("error")
 
-    elif opcion == 2 :
-        resultado = sum /notass
-        print(f"Resultado es:", resultado )
-        break
+    elif notass > 11:
+        print("Error")
 
-    elif opcion > 10:
-            print("Error")
+    elif opcion == 3 :
+        print("chauuuu" )
+    break
+
+
+
 
 
     
