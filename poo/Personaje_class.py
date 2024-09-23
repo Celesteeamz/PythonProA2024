@@ -2,16 +2,16 @@ class Personaje:
     estado = True
     vida = 100
 
-    def__init__(self, nombre, altura, velocidad, recistencia, fuerza):
+    def __init__(self, nombre, altura, velocidad, recistencia, fuerza):
         self.nombre = nombre
         self.altura = altura
-        self. velocidad = velocidad:
+        self. velocidad = velocidad
         self.recistencia = recistencia
         self.fuerza = fuerza
         self.estado = Personaje.estado
         self.via = Personaje.vida
 
-    def atacar (self, personaje_nuevo)
+    def atacar (self, personaje_nuevo):
         if self.estado:
             danho = self.fuerza - (otro_personaje.resistencia)
             print(f"{self.nombre} ataca a {otro_personaje.nombre} causando {danho} de daño")
@@ -19,7 +19,7 @@ class Personaje:
         else:
             print(f"{self.nombre} esta muerto")
 
-    def recibir_danho(self. cantidad):
+    def recibir_danho(self, cantidad):
         if self.estado:
             self.vida = self.vida - cantidad
             print(f"{self.nombre} recibio {cantidad} de daño.")
