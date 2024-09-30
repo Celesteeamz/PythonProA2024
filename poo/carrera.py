@@ -40,11 +40,17 @@ while True:
                                 print(f"- {personaje.nombre}")
                                 continue
 
-        elif opcion <= 3:
+        elif opcion < 3:
                 print("Esta opcion no existe")
                 break
 
         if opcion == 3:
-                print("Se inicio la carrera")
+                menu =  '''
+                #############################
+                | 1. Iniciar carrera        |
+                | 2. No iniciar carrera     | 
+                ############################# 
+                '''
+                print(menu)
 
-
+                if opcion == 1:
