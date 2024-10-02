@@ -11,6 +11,7 @@ menu =  '''
 cantidadPersonaje = 0
 nuevo_personaje = []
 personajes = []
+danhoo = []
 
 while True:
         print(menu)
@@ -35,22 +36,7 @@ while True:
                         print("No hay personajes")
 
                 else:
-                        print("Con los siguientes personajes se iniciara la carrera ")
-                        for personaje in personajes:
-                                print(f"- {personaje.nombre}")
-                                continue
-
-        elif opcion < 3:
-                print("Esta opcion no existe")
-                break
-
-        if opcion == 3:
-                menu =  '''
-                #############################
-                | 1. Iniciar carrera        |
-                | 2. No iniciar carrera     | 
-                ############################# 
-                '''
-                print(menu)
-
-                if opcion == 1:
+                        print("Con los siguientes personajes se iniciara la carrera ") 
+                        for personaje in personajes: 
+                             print(f"- {personaje_nuevo}")
+                print("salga de la carrera e ingrese otro numero de fuerza mayor a 0: ")
