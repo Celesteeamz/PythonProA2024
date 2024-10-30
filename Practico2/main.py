@@ -33,19 +33,32 @@ def mine():
         print(menu)
         opcion = input ("Seleccione la opcion: ")
 
-        if opcionn == 1:
-            print(menuDos)
-            elif opcionUno == 1:
-                nombreEstudiante = input ("Ingrese nombre del estudiante: ")
-                apeliidoEstudiante = input ("Ingrese apellido del estudiante: ") 
-                dniEstudiante = input ("Ingrese dni del estudiante: ")
-                añoEstudiante = input ("Ingresar edad del estudiante: ")
-                cursoEstudiante = input ("Ingresar curso del estudiante: ")
-                emailEstudiante = input ("Ingresar estado del estudiante: ")
-                Estudiante.agregar(conn, nombre, apellido, dni, año, curso, email, estado)
+    if opcionn == 1:
+        print(menuDos)
+        if opcionUno == 1:
+            nombreEstudiante = input ("Ingrese nombre del estudiante: ")
+            apeliidoEstudiante = input ("Ingrese apellido del estudiante: ") 
+            dniEstudiante = int(input ("Ingrese dni del estudiante: "))
+            añoEstudiante = int(input ("Ingresar edad del estudiante: "))
+            cursoEstudiante = input ("Ingresar curso del estudiante: ")
+            emailEstudiante = input ("Ingresar estado del estudiante: ")
+            Estudiante.agregar(conn, nombre, apellido, dni, año, curso, email, estado)
 
-            elif opcionDos == 2:
-                nombreProfesor = input ("Ingresar nombre del profesor: ")
-                apellidoProfesor
+        elif opcionDos == 2:
+            nombreProfesor = input ("Ingresar nombre del profesor: ")
+            apellidoProfesor = input ("Ingresar nombre del profesor: ")
+            dniProfesor = int(input("Ingresar dni del profesor: "))
+            cursoProfesor = input ("Ingresar curso del profesor")
+            estadoProfesor = input ("Ingresar estado del profesor: ")
+            emailProfesor = input ("Ingresar email del profesor: ")
+            Profesor.agregar(conn, dni, nombre, apellido, curso, estado, email)
 
-            elif opcionTres == 3:
+        elif opcionTres == 3:
+            nombreMateria = input("Ingresar nombre de la materia:")
+            cursoMateria = input("Ingresar curso de la materia: ")
+            horarioMateria = input("Ingresar horario de la materia: ")
+            profesorMateria = input("Ingrese profesor acargo de esta materia: ")
+            Materia.agregar(conn, nombre, curso, horario, profesor)
+        
+        elif opcionCuatro == 4:
+            cursoCalificacion = input("Ingresar curso ")
