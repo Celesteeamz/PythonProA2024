@@ -9,50 +9,62 @@
 </head>
 <body>
   <header>
-    <nav class="navbar bg-body-tertiary">
-      <div class="container-fluid">
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Buscador" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Buscar</button>
-        </form>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Adopciones</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Mascotas</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Refugios</a>
-                </li>
-              </ul>
-            </div>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar bg-body-tertiary">
+          <div class="container-fluid">
+            <img src="img/logopets.jpeg" alt="..."
+            width="55" height="55">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" id="search-input" placeholder="Buscador" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
         </nav>
       </div>
     </nav>
   </header>
   <main>
-      <div class="card" style="width: 18rem;">
-        <img src="img/foto.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card">
+          <img src="img/mascotastres.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
         </div>
       </div>
-    <section class="example" id="example2">
+      <div class="col">
+        <div class="card">
+          <img src="img/foto.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="img/mascotas.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="example" id="example2 button">
       <h2>Veterinarias</h2>
       <ul class="nav nav-underline">
-        <li class="nav-item">
+        <li data-localidad="La Falda" class="nav-item">
           <a class="nav-link" href="veterinariasLaFalda.html">La Falda</a>
         </li>
-        <li class="nav-item">
+        <li data-localidad="Villa Giardino" class="nav-item">
           <a class="nav-link" href="veterinariasVillaGiardino.html">Villa Giardino</a>
         </li>
-        <li class="nav-item">
+        <li data-localidad="Valle Hermoso" class="nav-item">
           <a class="nav-link" href="veterinariosValleHermoso.html">Valle Hermoso</a>
         </li>
-          <li class="nav-item">
+        <li data-localidad="Huerta Grande" class="nav-item">
             <a class="nav-link" href="veterinariasHuertaGrande.html">Huerta Grande</a>
           </li>
       </ul>
