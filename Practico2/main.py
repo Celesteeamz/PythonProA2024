@@ -12,14 +12,6 @@ def mine():
     conn = conectar_db()
     cursor = conn.cursor()
 
-    menu = '''
-        -----------------------------------------------------------------
-        | 1. Agregar estudiante, profesor, materia, calificacion.       |
-        | 2. Mostrar estudiantes, profesores, materias, calificaciones. |
-        | 3. Salir.                                                     |
-        -----------------------------------------------------------------
-    
-    '''
     menuDos = '''
             -----------------------------
             | 1. Estudiante.            |
@@ -38,69 +30,36 @@ def mine():
             -----------------------------
     '''
     while True:
-        print(menu)
+        print(menuDos)
         opcion = input ("Seleccione la opcion: ")
 
     if opcionn == 1:
-        print(menuDos)
-        
-        if opcion == 1:
-            nombre = input ("Ingrese nombre del estudiante: ")
-            apeliido = input ("Ingrese apellido del estudiante: ") 
-            dni = int(input ("Ingrese dni del estudiante: "))
-            anho = int(input ("Ingresar edad del estudiante: "))
-            curso = input ("Ingresar curso del estudiante: ")
-            email = input ("Ingresar estado del estudiante: ")
-            #estudiantes.guardar(conn, nombre, apellido, dni, anho, curso, email, estado)
-            #print("1.Si   2.No")
-            contestar = input("Luis")
-            
-            #    if opcion == 1:
-            #        print(menu)
-                
-            #    if opcion == 2:
-            #        continue
-
-        elif opcion == 2:
-            nombre = input ("Ingresar nombre del profesor: ")
-            apellido = input ("Ingresar nombre del profesor: ")
-            dni = int(input("Ingresar dni del profesor: "))
-            curso = input ("Ingresar curso del profesor")
-            estado = input ("Ingresar estado del profesor: ")
-            email = input ("Ingresar email del profesor: ")
-            profesores.agregar(conn, dni, nombre, apellido, curso, estado, email)
-
-        elif opcion == 3:
-            nombre = input("Ingresar nombre de la materia:")
-            curso = input("Ingresar curso de la materia: ")
-            horario = int(input("Ingresar horario de la materia: "))
-            profesor = input("Ingrese profesor acargo de esta materia: ")
-            materias.agregar(conn, nombre, curso, horario, profesor)
-
-        elif opcion == 4:
-            curso = input("Ingresar curso: ")
-            materia = input("Ingresar materia: ")
-            calificacion = int(input("Ingresar calificacion del estudiante:"))
-            estudiante = input ("Ingresar estudiante: ")
-            fecha = int(input("Ingresar fecha de la calificacion: "))
-
-            calificaciones.agregar(conn, curso, materia, calificacion, estudiante, fecha)
+        dni_id = int(input("Ingrese dni del estuiante: "))
+        nombre = input("Ingrese solo el nombre del estudiante: ")
+        apellido = input("Ingrese el apellido el estudiante: ")
+        fecha_nacimiento = int(input("Ingrese la fecha de nacimiento: "))
+        curso = int(input("Ingresar curso(1ro,2do,3ro,4to,5to,6to: "))
+        email = input("Ingresar email del estudiante o mayor a cargo: ")
+        estado = input("'Cursando' o 'No cursando': ")
+        continue
 
     elif opcion == 2:
-        print(menuTres)
-
-        if opcion == 1:
-            estudiantes.mostrar_todos(conn)
-
-        elif opcion == 2:
-            profesores.mostrar_todos(conn)
-
-        elif opcion == 3:
-            materias.mostrar_todos(conn)
-
-        elif opcion == 4:
-            calificaciones.mostrar_todos(conn)
+        dni_id = int(input("Ingrese dni del docente:"))
+        nombre = input("Ingrese solo el nombre del profesor: ")
+        apellido = input("Ingrese el apellido del docente: ")
+        curso = int(input("Ingresar curso(1ro,2do,3ro,4to,5to,6to: "))
+        estado = input("'Cursando' o 'No cursando': ")
+        email = input("Ingresar email del docente: ")
+        estudiante = Estudiante(None, dni_id, nombre, apellido, curso, estado, email))
+        estudiante.agregar()
+        print("Estudiante agregado.")
+        continue
 
     elif opcion == 3:
-        print("chau")
-    break
+        nombre = input("Ingrese nombre de la materia: ")
+        curso = int(input("Ingrese curso correspondiente de la materia: "))
+        horario = int(input("Ingresar horario de la materia (cuando empieza y termina: "))
+        descripcion = input("Ingresar despripción de la materia: ")
+        profesor = input("Ingresar nombre de profesor a cargo de la materia: ")
+
+        
