@@ -109,6 +109,10 @@ main {
     grid-area: main;
 }
 
+h1 {
+    color: white; /* Establece el color del texto en blanco */
+}
+
 .right {
     grid-area: right;
 }
